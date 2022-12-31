@@ -1,0 +1,46 @@
+package com.MainApplicaiton;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Address 
+{
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private int id;
+	private int pin;
+	private String city;
+	
+	public int getPin() {
+		return pin;
+	}
+	public void setPin(int pin) {
+		this.pin = pin;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public Address(int pin, String city) {
+		super();
+		this.pin = pin;
+		this.city = city;
+	}
+	
+	public Address() {
+		System.out.println("Address class Object created....................................!!!!!!!!!!!!!");
+	}
+	@Override
+	public String toString() {
+		return "Address [pin=" + pin + ", city=" + city + "]";
+	}
+	
+	
+	
+}

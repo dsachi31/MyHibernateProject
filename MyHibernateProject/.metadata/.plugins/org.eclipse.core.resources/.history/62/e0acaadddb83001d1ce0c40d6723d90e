@@ -1,0 +1,28 @@
+package com.MainApplicaiton;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Job_Applicant_main {
+
+	
+	public static void main(String[] args) {
+	
+		Configuration config=new Configuration();
+		config.configure("job.xml");
+		
+		SessionFactory sf = config.buildSessionFactory();
+		Session session = sf.openSession();
+		Transaction t = session.beginTransaction();//one request and response
+		Job_Applicant_Entity jpe = new Job_Applicant_Entity(); 
+		jpe.setName("Nojma");
+		jpe.setYop(2019);
+		jpe.setEmail("dsachi31@gmail.com");
+		jpe.setResult(63.2);
+		session.save(jpe);
+
+	}
+
+}

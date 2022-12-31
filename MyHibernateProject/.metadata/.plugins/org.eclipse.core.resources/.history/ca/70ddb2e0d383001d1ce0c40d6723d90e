@@ -1,0 +1,19 @@
+package com.MainApplicaiton;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Job_Applicant_main {
+
+	
+	public static void main(String[] args) {
+	
+		Configuration config=new Configuration();
+		config.configure("job.xml");
+		
+		SessionFactory sf = config.buildSessionFactory();
+		Session session = sf.openSession();
+
+	}
+
+}

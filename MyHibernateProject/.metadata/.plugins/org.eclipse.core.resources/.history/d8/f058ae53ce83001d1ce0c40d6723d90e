@@ -1,0 +1,10 @@
+package com.MainApplicaiton;
+
+public class Job_Applicant_main {
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

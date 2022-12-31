@@ -1,0 +1,50 @@
+package com.MainApplicaiton;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Job_Applicant_Entity {
+	
+	public Job_Applicant_Entity()
+	{
+		System.out.println("entity classs executing");
+	}
+	
+	public Job_Applicant_Entity(String name, int yop, double result, String email) {
+		super();
+		this.name = name;
+		this.yop = yop;
+		this.result = result;
+		this.email = email;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getYop() {
+		return yop;
+	}
+	public void setYop(int yop) {
+		this.yop = yop;
+	}
+	public double getResult() {
+		return result;
+	}
+	public void setResult(double result) {
+		this.result = result;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	@Id
+	private String name;
+	private int yop;
+	private double result;
+	private String email;
+
+}
